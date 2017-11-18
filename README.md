@@ -24,7 +24,7 @@ Navigate to the index page, and you'll be presented with a table of recipes. The
 Clicking a name in the recipe list table will bring you to this page. It displays the recipe's image, name, ingredients and cooking time. The ingredient quantities are not part of the given `recipes.json`, so they are made up (`app.js:51`). If you alter the URL to send an invalid recipe ID, you'll be shown a message telling you that the recipe cannot be found, but the page is still populated with an alternative recipe.
 
 ### 3. Filter recipes
-On the index page, you can filter by Name, Ingredient, Time and Starred. If you search returns no results, you'll be shown an appropriate message.
+On the index page, you can filter by Name, Ingredient, Time and Starred. If your search returns no results, you'll be shown an appropriate message.
 
 ### 4. Pagination
 When there are more than ten recipes in the system, pagination controls are displayed and the user can click next and previous, to see multiple pages of results. Regrettably, I'm not a culinary artist, so recipe four onwards is just recipe three with a ++'ed ID, which probably won’t give Joe much inspiration... uncomment `app.js:70` to see this behaviour.
