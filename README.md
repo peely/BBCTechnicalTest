@@ -27,7 +27,7 @@ Clicking a name in the recipe list table will bring you to this page. It display
 On the index page, you can filter by Name, Ingredient, Time and Starred. If you search returns no results, you'll be shown an appropriate message.
 
 ### 4. Pagination
-When there are more than 10 recipes in the system, pagination controls are displayed and the user can click next and previous, to see multiple pages of results. I'm not culinary artist so recipe 4 onwards is just recipe 3 with a ++'ed ID, which probably won’t give Joe much inspiration...
+When there are more than ten recipes in the system, pagination controls are displayed and the user can click next and previous, to see multiple pages of results. Regrettably, I'm not a culinary artist, so recipe four onwards is just recipe three with a ++'ed ID, which probably won’t give Joe much inspiration... uncomment `app.js:70` to see this behaviour.
 
 ### 5. Star
 Click the star on the table, it changes to being stared, and you can filter based on this. If Joe has no starred recipes, hes told so.
