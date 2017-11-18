@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="BBC Coding Challange">
+    <meta name="author" content="Matthew Peel">
+
+    <title>{{ title }}</title>
+
+    <link href="/BS/css/bootstrap.css" rel="stylesheet">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/recipes.css' />
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">{{ title }}</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h1>Current Recipes</h1>
+				<span>List of all known Recipes in the world</span>
+
+				<div class="form-group recipeFilterArea">
+					<input id="recipeFilterInput" type="text" name="recipeFilterInput" class="form-control" onkeyup="filterRecipeTable('word', event)" />
+					<select id="recipeFilterByInput" class="form-control" onchange="filterRecipeTable('type', event)">
+						<option value="Name">Name</option>
+						<option value="Ingredient">Ingredient</option>
+						<option value="Time">Time</option>
+						<option value="Starred">Starred</option>
+					</select>
+				</div>
+
+				<table id="AllRecipeListTable" class="table table-responsive">
+					<thead>
+						<tr>
+							<th>ID</th>
+							<th>Image</th>
+							<th>Name</th>
+							<th>Main ingredients</th>
+							<th>Cooking Time</th>
+							<th>Starred</th>
+						</tr>
+					</thead>
+					<tbody>
+
+					</tbody>
+				</table>
+
+				<div id="tablePaginationContainer" class="form-group displayFlex hidden">
+					<button id="tblPrevButton" class="btn btn-primary displayInlineBlock">Previous</button>
+					<div id="currPageNumberContainer" class="flexGrow text-center"><span id="currPageNumer">0</span></div>
+					<button id="tblNextButton" class="btn btn-primary displayInlineBlock">Next</button>
+				</div>
+
+				<div id="noRecipeMessage" class="hidden">
+					<div class="jumbotron">
+					  <h1>Sorry, nothing matched your filter term</h1>
+					</div>
+				</div>
+				<div id="noStarredRecipeMessage" class="hidden">
+					<div class="jumbotron">
+					  <h1>Sorry, you don't currently have any starred recipes, get started by starring recipes you like</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+    <script src="/JQ/jquery.js"></script>
+    <script src="/BS/js/bootstrap.js"></script>
+    <script src="/javascripts/recipes.js"></script>    
+</body>
+</html>

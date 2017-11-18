@@ -1,0 +1,50 @@
+.repipeImage{
+	width: 100px;
+}
+
+.recipeFilterArea{
+	padding-top: 10px;
+}
+
+#recipeFilterInput{
+	width: 75%;
+	display: inline-block;
+}
+
+#recipeFilterByInput
+{
+	width: 24%;
+	display: inline-block;
+	float: right;
+}
+
+.recipeHeaderContainer{
+	position: relative;
+}
+
+.recipeHeaderImg{
+	width: 100%;
+}
+
+.recipeHeaderText{
+	position: absolute;
+    font-size: 6rem;
+    text-align: center;
+    width: 100%;
+    bottom: 0px;
+    background-color: rgba(125,125,125,0.5);
+    color: rgb(29, 29, 29);
+}
+
+#currPageNumberContainer
+{
+	padding-top: 10px;
+}
+
+.glyphicon-star{
+	color: rgba(125,125,125,0.5);
+}
+
+.starred{
+	color: rgba(255, 215, 0, 1);
+}

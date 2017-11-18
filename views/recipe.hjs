@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="BBC Coding Challange">
+    <meta name="author" content="Matthew Peel">
+
+    <title>{{ title }}</title>
+
+    <link href="/BS/css/bootstrap.css" rel="stylesheet">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/recipes.css' />
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">{{ title }}</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+
+    	<div id="noRecipeFoundMessage" class="{{ recipeNotFoundClass }}">
+			<div class="jumbotron">
+			  <h1>Sorry, this recipe doesn't exist or may have been removed</h1>
+			</div>
+		  	<h1>How about this one instead?</h1>
+		</div>
+
+    	<div class="row">
+    		<div class="col-md-12">
+    			<div class="recipeHeaderContainer">
+	    			<div class="recipeHeaderText">{{ recipe.name }}</div>
+	    			<img class="img-responsive recipeHeaderImg" src="{{ recipe.imageUrl }}"/>
+	    		</div>
+    		</div>
+    	</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Cooking Time: {{ recipe.cookingTime }}</h2>
+				<h2>Ingredients</h2>
+				<ul>
+					{{#recipe.ingredientsAugmented}}
+						<li>{{ quantity }} {{ unit }} x {{ name }}</li>
+					{{/recipe.ingredientsAugmented}}
+				</ul>
+			</div>
+		</div>
+
+    </div>
+
+    <script src="/JQ/jquery.js"></script>
+    <script src="/BS/js/bootstrap.js"></script>
+    <script src="/javascripts/recipes.js"></script>  
+</body>
+</html>
